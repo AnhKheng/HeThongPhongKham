@@ -74,9 +74,8 @@ CREATE TABLE NhanVien (
     NhanVienID   INT IDENTITY(1,1) PRIMARY KEY,
     ThongTinID   INT NOT NULL UNIQUE,
     ChucVuID	 INT NOT NULL,
-    Salary       DECIMAL(12,2),
-    HireDate     DATE,
-    PhongBan     NVARCHAR(100),
+    Luong       DECIMAL(12,2),
+    NgayVaoLam     DATE,
     BangCap      NVARCHAR(500),
     KinhNghiem   NVARCHAR(500),
     FOREIGN KEY (ThongTinID) REFERENCES ThongTinCaNhan(ThongTinID) ON DELETE CASCADE,
@@ -124,9 +123,8 @@ CREATE TABLE PhongChucNang (
     TenPhong NVARCHAR(200) NOT NULL,
     LoaiPhong NVARCHAR(100),
     MoTa NVARCHAR(MAX),
-    Tang INT DEFAULT 1,
-    TrangThai NVARCHAR(50) CHECK (TrangThai IN ('active', 'inactive', N'bảo trì')) DEFAULT 'active',
-    NgayTao DATETIME DEFAULT GETDATE()
+    TrangThai NVARCHAR(50) CHECK (TrangThai IN (N'Hoạt động', N'Hỏng', N'Bảo trì')) DEFAULT N'Hoạt động',
+    NgayNhap DATETIME DEFAULT GETDATE()
 );
 GO
 
@@ -136,8 +134,7 @@ CREATE TABLE ThietBi (
     TenTB NVARCHAR(200) NOT NULL,
     LoaiTB NVARCHAR(100),
     TinhTrang NVARCHAR(100) CHECK (TinhTrang IN (N'Hoạt động', N'Hỏng', N'Bảo trì')) DEFAULT N'Hoạt động',
-    NgayMua DATETIME,
-    NgayTao DATETIME DEFAULT GETDATE()
+    NgayNhap DATETIME DEFAULT GETDATE()
 );
 GO
 
@@ -154,19 +151,6 @@ CREATE TABLE PhongChucNang_ThietBi (
 );
 GO
 
--- Nhân viên làm việc ở phòng chức năng cụ thể --
-CREATE TABLE PhongChucNang_NhanVien (
-    ID INT IDENTITY(1,1) PRIMARY KEY,
-    NhanVienID INT NOT NULL,
-    PhongChucNangID INT NOT NULL,
-    VaiTro NVARCHAR(100),    -- Bác sĩ, Kỹ thuật viên, Phụ tá, Hỗ trợ, Điều dưỡng
-    NgayBatDau DATE DEFAULT GETDATE(),
-    NgayKetThuc DATE NULL,
-
-    FOREIGN KEY (NhanVienID) REFERENCES NhanVien(NhanVienID) ON DELETE CASCADE,
-    FOREIGN KEY (PhongChucNangID) REFERENCES PhongChucNang(PhongChucNangID)
-);
-GO
 -- ============================================
 -- 4. LỊCH LÀM VIỆC (NHÂN VIÊN)
 -- ============================================
@@ -445,7 +429,6 @@ CREATE TABLE LieuTrinh_BuoiDieuTri (
         DEFAULT 'pending',
     GhiChu NVARCHAR(MAX),
     HinhAnhJSON NVARCHAR(MAX),                 -- ảnh theo dõi liệu trình
-
     FOREIGN KEY (LieuTrinhID) REFERENCES LieuTrinhDieuTri(LieuTrinhID) ON DELETE CASCADE,
     FOREIGN KEY (NhanVienID) REFERENCES NhanVien(NhanVienID)
 );
@@ -503,24 +486,6 @@ CREATE TABLE BaiViet (
 	FOREIGN KEY (TacGiaID) REFERENCES TaiKhoan(TaiKhoanID) ON DELETE SET NULL,
     FOREIGN KEY (LoaiBenhID) REFERENCES LoaiBenh(LoaiBenhID)
 );
-GO
-
-
-
-
-INSERT INTO KhungGioKham (GioBatDau, GioKetThuc, TenKhung, MaxSlot) VALUES
-('07:00', '07:30', N'Sáng 1', 5),
-('07:30', '08:00', N'Sáng 2', 5),
-('08:00', '08:30', N'Sáng 3', 5),
-('08:30', '09:00', N'Sáng 4', 5),
-('09:00', '09:30', N'Sáng 5', 5),
-('09:30', '10:00', N'Sáng 6', 5),
-('13:00', '13:30', N'Chiều 1', 5),
-('13:30', '14:00', N'Chiều 2', 5),
-('14:00', '14:30', N'Chiều 3', 5),
-('14:30', '15:00', N'Chiều 4', 5),
-('15:00', '15:30', N'Chiều 5', 5),
-('15:30', '16:00', N'Chiều 6', 5);
 GO
 
 PRINT N'Database ClinicDB_New đã được tạo thành công (phiên bản gộp bác sĩ & nhân viên)!';
