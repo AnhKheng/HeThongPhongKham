@@ -49,7 +49,7 @@ INSERT INTO LichLamViecNhanVien (NhanVienID, PhongChucNangID, Ngay, CaLamViec) V
 (12,1,'2025-01-06',2);
 
 -- THỨ 3 (2025-01-07) - Nghỉ: NV3, NV6
-INSERT INTO LichLamViecNhanVien VALUES
+INSERT INTO LichLamViecNhanVien (NhanVienID, PhongChucNangID, Ngay, CaLamViec) VALUES
 (1,1,'2025-01-07',1),
 (2,1,'2025-01-07',2),
 (4,1,'2025-01-07',1),
@@ -62,7 +62,7 @@ INSERT INTO LichLamViecNhanVien VALUES
 (12,1,'2025-01-07',2);
 
 -- THỨ 4 (2025-01-08) - Nghỉ: NV1, NV11
-INSERT INTO LichLamViecNhanVien VALUES
+INSERT INTO LichLamViecNhanVien (NhanVienID, PhongChucNangID, Ngay, CaLamViec) VALUES
 (2,1,'2025-01-08',1),
 (3,1,'2025-01-08',2),
 (4,1,'2025-01-08',1),
@@ -75,7 +75,7 @@ INSERT INTO LichLamViecNhanVien VALUES
 (12,1,'2025-01-08',2);
 
 -- THỨ 5 (2025-01-09) - Nghỉ: NV4, NV9
-INSERT INTO LichLamViecNhanVien VALUES
+INSERT INTO LichLamViecNhanVien (NhanVienID, PhongChucNangID, Ngay, CaLamViec) VALUES
 (1,1,'2025-01-09',1),
 (2,1,'2025-01-09',2),
 (3,1,'2025-01-09',1),
@@ -88,7 +88,7 @@ INSERT INTO LichLamViecNhanVien VALUES
 (12,1,'2025-01-09',2);
 
 -- THỨ 6 (2025-01-10) - Nghỉ: NV2, NV7
-INSERT INTO LichLamViecNhanVien VALUES
+INSERT INTO LichLamViecNhanVien (NhanVienID, PhongChucNangID, Ngay, CaLamViec) VALUES
 (1,1,'2025-01-10',1),
 (3,1,'2025-01-10',2),
 (4,1,'2025-01-10',1),
@@ -101,7 +101,7 @@ INSERT INTO LichLamViecNhanVien VALUES
 (12,1,'2025-01-10',2);
 
 -- THỨ 7 (2025-01-11) - Nghỉ: NV10
-INSERT INTO LichLamViecNhanVien VALUES
+INSERT INTO LichLamViecNhanVien (NhanVienID, PhongChucNangID, Ngay, CaLamViec) VALUES
 (1,1,'2025-01-11',1),
 (2,1,'2025-01-11',2),
 (3,1,'2025-01-11',1),
@@ -115,7 +115,7 @@ INSERT INTO LichLamViecNhanVien VALUES
 (12,1,'2025-01-11',1);
 
 -- CHỦ NHẬT (2025-01-12) - Nghỉ: NV12
-INSERT INTO LichLamViecNhanVien VALUES
+INSERT INTO LichLamViecNhanVien (NhanVienID, PhongChucNangID, Ngay, CaLamViec) VALUES
 (1,1,'2025-01-12',1),
 (2,1,'2025-01-12',2),
 (3,1,'2025-01-12',1),
@@ -127,4 +127,45 @@ INSERT INTO LichLamViecNhanVien VALUES
 (9,1,'2025-01-12',1),
 (10,1,'2025-01-12',2),
 (11,1,'2025-01-12',1);
-	
+
+INSERT INTO CaKham (LichLamViecID, PhongChucNangID, NgayKham, KhungGioID, BenhNhanID, LyDoKham, TrangThai, GhiChu)
+VALUES
+(1, 1, '2025-01-03', 1, 1, N'Khám da liễu tổng quát', 'booked', NULL),
+(1, 1, '2025-01-03', 2, NULL, NULL, 'available', NULL),
+(1, 1, '2025-01-03', 3, 2, N'Nổi mẩn đỏ', 'confirmed', NULL),
+
+(2, 1, '2025-01-04', 1, NULL, NULL, 'available', NULL),
+(2, 1, '2025-01-04', 2, 3, N'Mụn trứng cá nặng', 'booked', NULL),
+(2, 1, '2025-01-04', 3, 4, N'Rụng tóc', 'completed', NULL),
+
+(3, 2, '2025-01-05', 1, 5, N'Soi da & điều trị laser', 'confirmed', NULL),
+(3, 2, '2025-01-05', 2, NULL, NULL, 'available', NULL),
+(3, 2, '2025-01-05', 3, 6, N'Nám da', 'booked', NULL),
+
+(4, 2, '2025-01-06', 1, 7, N'Điều trị sẹo rỗ', 'confirmed', NULL),
+(4, 2, '2025-01-06', 2, NULL, NULL, 'available', NULL),
+(4, 2, '2025-01-06', 3, 8, N'Giãn mao mạch', 'completed', NULL),
+
+(5, 3, '2025-01-07', 1, NULL, NULL, 'available', NULL),
+(5, 3, '2025-01-07', 2, 9, N'Theo dõi điều trị', 'booked', NULL),
+(5, 3, '2025-01-07', 3, 10, N'Tái khám', 'confirmed', NULL),
+
+(6, 3, '2025-01-08', 1, 2, N'Xét nghiệm da liễu', 'booked', NULL),
+(6, 3, '2025-01-08', 2, NULL, NULL, 'available', NULL),
+(6, 3, '2025-01-08', 3, 3, N'Khám dị ứng', 'completed', NULL),
+
+(7, 3, '2025-01-09', 1, NULL, NULL, 'available', NULL),
+(7, 3, '2025-01-09', 2, 4, N'Khám ban đỏ', 'booked', NULL),
+(7, 3, '2025-01-09', 3, 5, N'Nấm da đầu', 'confirmed', NULL),
+
+(8, 2, '2025-01-10', 1, 6, N'Điều trị laser nám', 'completed', NULL),
+(8, 2, '2025-01-10', 2, NULL, NULL, 'available', NULL),
+(8, 2, '2025-01-10', 3, 7, N'Xóa xăm', 'booked', NULL),
+
+(9, 2, '2025-01-11', 1, 8, N'Chăm sóc da chuyên sâu', 'confirmed', NULL),
+(9, 2, '2025-01-11', 2, NULL, NULL, 'available', NULL),
+(9, 2, '2025-01-11', 3, 9, N'Điều trị mụn', 'booked', NULL),
+
+(10, 3, '2025-01-12', 1, 10, N'Theo dõi kết quả điều trị', 'confirmed', NULL),
+(10, 3, '2025-01-12', 2, NULL, NULL, 'available', NULL),
+(10, 3, '2025-01-12', 3, 1, N'Khám định kỳ', 'booked', NULL);

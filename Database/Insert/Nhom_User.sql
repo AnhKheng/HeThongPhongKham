@@ -106,7 +106,7 @@ INSERT INTO ThongTinCaNhan (TaiKhoanID, HoTen, NgaySinh, GioiTinh, SDT, EmailLie
 (37, N'Huệ Phan', '2002-08-30', 'Nu', '0915001026', 'huephan02@example.com', N'Q12', 'benhnhan'),
 (38, N'Tuyết Nhung', '1993-09-27', 'Nu', '0915001027', 'tuyetnhung@example.com', N'Q4', 'benhnhan'),
 (39, N'Thiện Minh', '2004-03-15', 'Nam', '0915001028', 'thienminh04@example.com', N'Q5', 'benhnhan'),
-(40, N'Gia Hân', '1999-06-12', 'Nu', '0915001029', 'giahan99@example.com', N'Q6', 'benhnhan'),
+(40, N'Gia Hân', '1999-06-12', 'Nu', '0915001029', 'giahan99@example.com', N'Q6', 'benhnhan');
 GO
 
 --- BenhNhan ---
@@ -116,7 +116,7 @@ INSERT INTO BenhNhan (ThongTinID, MaSoBN) VALUES
 (22, 'BN0011'), (23,'BN0012'), (24,'BN0013'), (25,'BN0014'), (26,'BN0015'),
 (27, 'BN0016'), (28,'BN0017'), (29,'BN0018'), (30,'BN0019'), (31,'BN0020'),
 (32, 'BN0021'), (33,'BN0022'), (34,'BN0023'), (35,'BN0024'), (36,'BN0025'),
-(37, 'BN0026'), (38,'BN0027'), (39,'BN0028'), (40,'BN0029'),
+(37, 'BN0026'), (38,'BN0027'), (39,'BN0028'), (40,'BN0029');
 GO
 
 
@@ -154,3 +154,4 @@ VALUES
 (3, N'Chuyên gia điều trị bệnh da mãn tính.', N'Viêm da - Vảy nến', N'Nghiên cứu chuyên sâu', N'bs_trananhkhoa.jpg', N'12 năm kinh nghiệm'),
 (4, N'Bác sĩ điều trị thẩm mỹ da.', N'Laser - Nội khoa da liễu', N'Nhiều ca điều trị thành công', N'bs_minhtuan.jpg', N'7 năm kinh nghiệm');
 GO
+

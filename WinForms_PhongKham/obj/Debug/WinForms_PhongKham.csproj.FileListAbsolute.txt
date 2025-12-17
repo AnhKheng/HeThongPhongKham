@@ -1,0 +1,13 @@
+D:\DoAnTotNghiep\HeThongPhongKham\WinForms_PhongKham\bin\Debug\WinForms_PhongKham.exe.config
+D:\DoAnTotNghiep\HeThongPhongKham\WinForms_PhongKham\bin\Debug\WinForms_PhongKham.exe
+D:\DoAnTotNghiep\HeThongPhongKham\WinForms_PhongKham\bin\Debug\WinForms_PhongKham.pdb
+D:\DoAnTotNghiep\HeThongPhongKham\WinForms_PhongKham\obj\Debug\WinForms_PhongKham.csproj.AssemblyReference.cache
+D:\DoAnTotNghiep\HeThongPhongKham\WinForms_PhongKham\obj\Debug\WinForms_PhongKham.Properties.Resources.resources
+D:\DoAnTotNghiep\HeThongPhongKham\WinForms_PhongKham\obj\Debug\WinForms_PhongKham.csproj.GenerateResource.cache
+D:\DoAnTotNghiep\HeThongPhongKham\WinForms_PhongKham\obj\Debug\WinForms_PhongKham.csproj.CoreCompileInputs.cache
+D:\DoAnTotNghiep\HeThongPhongKham\WinForms_PhongKham\obj\Debug\WinForms_PhongKham.exe
+D:\DoAnTotNghiep\HeThongPhongKham\WinForms_PhongKham\obj\Debug\WinForms_PhongKham.pdb
+D:\DoAnTotNghiep\HeThongPhongKham\WinForms_PhongKham\bin\Debug\Guna.UI2.dll
+D:\DoAnTotNghiep\HeThongPhongKham\WinForms_PhongKham\obj\Debug\WinForms_PhongKham.exe.config
+D:\DoAnTotNghiep\HeThongPhongKham\WinForms_PhongKham\obj\Debug\WinForms_PhongKham.FrmMain.resources
+D:\DoAnTotNghiep\HeThongPhongKham\WinForms_PhongKham\obj\Debug\WinForms.443DF94E.Up2Date

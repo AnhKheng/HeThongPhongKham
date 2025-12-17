@@ -68,7 +68,7 @@ VALUES
 (3, 2, 1),
 (3, 3, 1),
 (3, 4, 1),
-(3, 18, 1);
+(3, 17, 1);
 
 INSERT INTO PhongChucNang_ThietBi (PhongChucNangID, ThietBiID, SoLuong)
 VALUES
@@ -83,3 +83,5 @@ VALUES
 (5, 9, 1),
 (5, 10, 1),
 (5, 11, 1);
+
+
