@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WinForms_PhongKham.DTO
+{
+	public class LieuTrinh_BuoiDieuTriDTO
+	{
+		public int BuoiDieuTriID { get; set; }
+		public int LieuTrinhID { get; set; }
+		public int SoBuoi { get; set; }
+		public DateTime? NgayDuKien { get; set; }
+		public DateTime? NgayThucHien { get; set; }
+		public int? NhanVienID { get; set; }
+		public string TrangThai { get; set; }
+		public string GhiChu { get; set; }
+		public string HinhAnhJSON { get; set; }
+	}
+}
