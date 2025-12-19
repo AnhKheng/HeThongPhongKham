@@ -1,0 +1,9 @@
+D:\DoAnTotNghiep\HeThongPhongKham\DAO\bin\Debug\DAO.dll
+D:\DoAnTotNghiep\HeThongPhongKham\DAO\bin\Debug\DAO.pdb
+D:\DoAnTotNghiep\HeThongPhongKham\DAO\bin\Debug\DTO.dll
+D:\DoAnTotNghiep\HeThongPhongKham\DAO\bin\Debug\DTO.pdb
+D:\DoAnTotNghiep\HeThongPhongKham\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\DoAnTotNghiep\HeThongPhongKham\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\DoAnTotNghiep\HeThongPhongKham\DAO\obj\Debug\DAO.csproj.Up2Date
+D:\DoAnTotNghiep\HeThongPhongKham\DAO\obj\Debug\DAO.dll
+D:\DoAnTotNghiep\HeThongPhongKham\DAO\obj\Debug\DAO.pdb
