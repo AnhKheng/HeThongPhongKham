@@ -125,6 +125,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="img\action\exit.png" />
     <Content Include="img\Readme.txt" />
   </ItemGroup>

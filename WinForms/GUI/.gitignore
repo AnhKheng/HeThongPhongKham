@@ -1,0 +1,35 @@
+############################################
+# Visual Studio / .NET
+############################################
+
+# Visual Studio working folder
+.vs/
+
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+Debug/
+Release/
+x64/
+x86/
+
+packages/
+*.nupkg
+*.snupkg
+
+*.log
+*.tmp
+*.cache
+
+.DS_Store
+Thumbs.db
+
+*.bak
+*.old
