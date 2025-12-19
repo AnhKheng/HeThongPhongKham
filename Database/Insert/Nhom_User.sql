@@ -52,9 +52,9 @@ INSERT INTO TaiKhoan (Email, PasswordHash, Role) VALUES
 ('huephan02@example.com','hash123','customer'),
 ('tuyetnhung@example.com','hash123','customer'),
 ('thienminh04@example.com','hash123','customer'),
-('giahan99@example.com','hash123','customer');
+('giahan99@example.com','hash123','customer'),
+('admin@clinic.com', 'hash123', 'Admin');
 GO
-
 --- ThongTinCaNhan ---
 -- 11 nhân viên
 INSERT INTO ThongTinCaNhan (TaiKhoanID, HoTen, NgaySinh, GioiTinh, SDT, EmailLienHe, DiaChi, Loai)
@@ -106,9 +106,9 @@ INSERT INTO ThongTinCaNhan (TaiKhoanID, HoTen, NgaySinh, GioiTinh, SDT, EmailLie
 (37, N'Huệ Phan', '2002-08-30', 'Nu', '0915001026', 'huephan02@example.com', N'Q12', 'benhnhan'),
 (38, N'Tuyết Nhung', '1993-09-27', 'Nu', '0915001027', 'tuyetnhung@example.com', N'Q4', 'benhnhan'),
 (39, N'Thiện Minh', '2004-03-15', 'Nam', '0915001028', 'thienminh04@example.com', N'Q5', 'benhnhan'),
-(40, N'Gia Hân', '1999-06-12', 'Nu', '0915001029', 'giahan99@example.com', N'Q6', 'benhnhan');
+(40, N'Gia Hân', '1999-06-12', 'Nu', '0915001029', 'giahan99@example.com', N'Q6', 'benhnhan'),
+(41,N'Quản trị hệ thống','1990-01-01','Nam','0999000000','admin@clinic.com',N'TP.HCM','nhanvien');
 GO
-
 --- BenhNhan ---
 INSERT INTO BenhNhan (ThongTinID, MaSoBN) VALUES
 (13,'BN0002'), (14,'BN0003'), (15,'BN0004'), (16,'BN0005'),

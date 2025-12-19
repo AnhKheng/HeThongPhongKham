@@ -52,45 +52,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\DbConnection.cs" />
-    <Compile Include="DTO\PhongChucNangDTO.cs" />
-    <Compile Include="DTO\PhongKhamDTO.cs" />
-    <Compile Include="DTO\BenhNhanDTO.cs" />
-    <Compile Include="DTO\BacSiProfileDTO.cs" />
-    <Compile Include="DTO\ChucVuDTO.cs" />
-    <Compile Include="DTO\NhanVienDTO.cs" />
-    <Compile Include="DTO\BaiVietDTO.cs" />
-    <Compile Include="DTO\PhienKham_ThietBiDTO.cs" />
-    <Compile Include="DTO\LoaiBenhDTO.cs" />
-    <Compile Include="DTO\ChiTietToaThuocDTO.cs" />
-    <Compile Include="DTO\PhienKham_BenhDTO.cs" />
-    <Compile Include="DTO\TaiKhamDTO.cs" />
-    <Compile Include="DTO\LieuTrinhDieuTriDTO.cs" />
-    <Compile Include="DTO\LieuTrinh_BuoiDieuTriDTO.cs" />
-    <Compile Include="DTO\BuoiDieuTri_CanLamSangDTO.cs" />
-    <Compile Include="DTO\AI_TrainingFeedbackDTO.cs" />
-    <Compile Include="DTO\ToaThuocDTO.cs" />
-    <Compile Include="DTO\ThuocDTO.cs" />
-    <Compile Include="DTO\ThietBiDTO.cs" />
-    <Compile Include="DTO\CanLamSangDTO.cs" />
-    <Compile Include="DTO\PhienKhamDTO.cs" />
-    <Compile Include="DTO\HoSoBenhAnDTO.cs" />
-    <Compile Include="DTO\CaKhamDTO.cs" />
-    <Compile Include="DTO\KhungGioKhamDTO.cs" />
-    <Compile Include="DTO\NgayNghiNhanVienDTO.cs" />
-    <Compile Include="DTO\LichLamViecNhanVienDTO.cs" />
-    <Compile Include="DTO\PhongChucNang_ThietBiDTO.cs" />
-    <Compile Include="DTO\TaiKhoanDTO.cs" />
-    <Compile Include="DTO\ThongTinCaNhanDTO.cs" />
-    <Compile Include="UI\Forms\FrmMain.cs">
+    <Compile Include="Common\Helper.cs" />
+    <Compile Include="Common\PasswordHasher.cs" />
+    <Compile Include="Common\Session.cs" />
+    <Compile Include="Forms\FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Forms\FrmMain.Designer.cs">
+    <Compile Include="Forms\FrmDangNhap.Designer.cs">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Program.cs" />
+    <Compile Include="Forms\FrmMau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMau.Designer.cs">
+      <DependentUpon>FrmMau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTaiKhoan.Designer.cs">
+      <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="UI\Forms\FrmMain.resx">
+    <EmbeddedResource Include="Forms\FrmDangNhap.resx">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -103,6 +97,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Forms\FrmMau.resx">
+      <DependentUpon>FrmMau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTaiKhoan.resx">
+      <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -121,10 +121,18 @@
     <None Include="img\action\exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BUS\" />
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{ef4dbf8b-f2aa-4056-b665-97c9748362c3}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{71d5701a-a5e4-4fbe-a296-9caef7ef5649}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
